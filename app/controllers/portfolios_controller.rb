@@ -25,18 +25,22 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.find(params[:id])
   end
 
-   def update
-      @portfolio_item = Portfolio.find(params[:id])
+  def update
+    @portfolio_item = Portfolio.find(params[:id])
 
-    respond_to do |format|
-      if @portfolio_item.update(portfolio_item_params)
-        format.html { redirect_to portfolios_path, notice: 'The record was successfully updated.' }
-        format.json { render :show, status: :ok, location: @blog }
-      else
-        format.html { render :edit }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
-      end
+  respond_to do |format|
+    if @portfolio_item.update(portfolio_item_params)
+      format.html { redirect_to portfolios_path, notice: 'The record was successfully updated.' }
+      format.json { render :show, status: :ok, location: @blog }
+    else
+      format.html { render :edit }
+      format.json { render json: @blog.errors, status: :unprocessable_entity }
     end
+  end
+end
+
+  def show 
+    @portfolio_item = Portfolio.find(params[:id])
   end
 
 
