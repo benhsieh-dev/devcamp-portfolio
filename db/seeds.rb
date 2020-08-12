@@ -36,8 +36,6 @@ puts "5 skills created"
   )
 end
 
-puts "8 portfolio items created"
-
 1.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
