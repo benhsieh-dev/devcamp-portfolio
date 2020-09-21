@@ -48,3 +48,5 @@ gem 'friendly_id', '~> 5.1.0'
 # gem 'friendly_id', '~> 5.2.4'
 gem 'devise', '~> 4.7', '>= 4.7.2'
 # gem 'devise', '~> 4.2'
+
+ruby "2.5.1"
